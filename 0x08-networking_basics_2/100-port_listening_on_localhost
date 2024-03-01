@@ -1,4 +1,4 @@
 #!/usr/binenv bash
 # This script make localhost listen on port 98
 
-nc -1 localhost 98
+nc -l localhost 98
