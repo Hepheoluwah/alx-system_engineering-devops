@@ -1,3 +1,4 @@
+
 # Fixes bad `phpp` extensions to `php` in the WordPress file `wp-settings.php`.
 
 exec { 'fix-wordpress':
