@@ -1,7 +1,6 @@
+# fix our stack so that there is not failed requests
 
-# Fixes bad `phpp` extensions to `php` in the WordPress file `wp-settings.php`.
-
-exec { 'fix-wordpress':
-  command => 'sed -i s/phpp/php/g /var/www/html/wp-settings.php',
-  path    => '/usr/local/bin/:/bin/'
+exec { 'change nginx limit':
+    command  => 'sudo sed -i "s/15/4096/g" /etc/default/nginx; sudo service nginx restart',
+    provider => shell,
 }
